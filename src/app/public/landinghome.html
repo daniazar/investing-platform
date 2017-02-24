@@ -1,28 +1,37 @@
 <!-- Header -->
-<a name="about"></a>
-<div class="intro-header">
-    <div class="container">
 
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="intro-message">
-                    <h1>Cognito QuickStart App</h1>
-                    <h3>Source code can be found <a href="https://github.com/awslabs/aws-cognito-angular2-quickstart">here</a>
-                    </h3>
-                    <hr class="intro-divider">
-                    <ul class="list-inline intro-social-buttons">
-                        <li>
-                            <a
-                                    [routerLink]="['/home/login']" class="btn btn-default btn-lg"> <i
-                                    class="fa fa-lock fa-fw"></i> <span class="network-name">Cognito</span> Login</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+<section fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutAlign.sm="start" fxLayoutGap="2vw" class="about">
+    
+    <app-about-card
+        [title]="'Socios por Crowdfunding'"
+        [description]="'Cualquiera puede generar su empresa a partir de la economia colaborativa.'"
+        [icon]="'people'"
+        [color]="'white'"
+    ></app-about-card>
+    <app-about-card
+        [title]="'Inversion directa a negocios'"
+        [description]="'Invierta de forma inteligente, sin intermediarios, ponga su dinero a trabajar en la creacion de nuevos proyectos.'"
+        [icon]="'business'"
+        [color]="'white'"
+    ></app-about-card>
+    <app-about-card
+        [title]="'Animese a emprender'"
+        [description]="'En poco tiempo puede generar trabajo, recuperar su inversion y ser parte de un emprendimiento.'"
+        [icon]="'hourglass_empty'"
+        [color]="'white'"
+    ></app-about-card>
 
-    </div>
-    <!-- /.container -->
+</section>
+<section fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutAlign.sm="start" fxLayoutGap="2vw" class="about">
+    <a md-raised-button routerLink="['/home/login']" >Como Funciona</a>
+</section>
 
-</div>
+<app-category-page></app-category-page>
 <!-- /.intro-header -->
+<md-toolbar color="primary">
+  <span>Proyectos</span>
+</md-toolbar>
+<section      fxLayout="row" fxLayout.sm="column" fxLayoutWrap fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutAlign.sm="start"  >
+    <div fxflex *ngFor="let item of getInvestItems()" ><invest-card [item]=item></invest-card></div>
+</section>
+
