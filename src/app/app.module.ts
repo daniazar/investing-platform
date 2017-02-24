@@ -64,7 +64,6 @@ import { ProjectFormPageComponent } from './pages/project-form-page/project-form
         routing,
         MaterialModule.forRoot(),
          FlexLayoutModule.forRoot()
-
     ],
     providers: [
         CategoryService,
