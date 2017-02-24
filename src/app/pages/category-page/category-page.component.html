@@ -1,0 +1,11 @@
+<md-toolbar color="primary">
+  <span>Categorias</span>
+</md-toolbar>
+<section      fxLayout="row" fxLayout.sm="column" fxLayoutWrap fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutAlign.sm="start">
+  <md-card fxflex class="category-card" *ngFor="let item of categories">
+    <md-card-header>
+      <md-card-title >{{item.title}}
+      </md-card-title>
+    </md-card-header>
+  </md-card>
+</section>

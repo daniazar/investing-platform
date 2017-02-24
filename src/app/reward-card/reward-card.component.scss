@@ -1,0 +1,58 @@
+@import "../../master";
+
+
+
+.reward-card{
+    min-width: 300px;
+  margin: 10px;
+  md-card-title {
+    color: $primary;
+    font-size: $titleSize
+  }
+  .hover-active{
+    opacity: 1!important;
+        transition: all 0.2s ease-in-out;
+    background: rgba(39, 255, 39, 0.82);
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0;
+    padding: 85px 0px;
+
+  }
+  .hover{
+    position: absolute;
+    opacity: 0;
+  }
+  .hover:onhover{
+    opacity: 1;
+  }
+  .category{
+      border: 1px green solid;
+      padding: 10px;
+      color: grey;
+      float: right;
+      top: -11px;
+      left: 15px;
+      position: relative;
+    }
+  .highlights{
+    padding-top: 20px;
+    span{
+      border: 1px red solid;
+      padding: 10px;
+    }
+  }
+  md-card-subtitle{
+    color: $secondary;
+    font-size: $subtitleSize
+    md-icon{
+      font-size: $subtitleSize
+    }
+  }
+}
+
+.example-header-image {
+  background-image: url('assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}

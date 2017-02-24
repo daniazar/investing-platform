@@ -1,0 +1,82 @@
+<p>
+  project-detail-page works!
+</p>
+  <md-toolbar md-scroll-shrink color="primary">
+    <div class="md-toolbar-tools">{{project.title}}</div>
+  <md-toolbar-row>
+    <span>{{project.description}}</span>
+  </md-toolbar-row>
+  </md-toolbar>
+
+<section      fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign="center start" fxLayoutAlign.sm="start" fxLayoutGap="2vw">
+
+  <section class="detail-main"     fxLayout="column" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign="start start" fxLayoutAlign.sm="start" fxLayoutGap="2vw">
+    <div fxflex>
+        <md-toolbar md-scroll-shrink color="secondary">
+          Resumen
+        </md-toolbar>
+        <article>{{project.summary}}</article>
+    </div>
+    <div fxflex>
+        <md-toolbar md-scroll-shrink color="secondary">
+           Video
+        </md-toolbar>
+        <article>{{project.video}}</article>
+   </div>
+    <div fxflex>
+      <md-toolbar md-scroll-shrink color="secondary">
+        Objetivos
+      </md-toolbar>
+      <article>{{project.objective}}</article>
+    </div>
+    <div fxflex>
+        <md-toolbar md-scroll-shrink color="secondary">
+          Caracteristicas
+        </md-toolbar>
+        <article>{{project.characteristics}}</article> 
+    </div>
+    <div fxflex>
+        <md-toolbar md-scroll-shrink color="secondary">
+          Estrategias
+        </md-toolbar>
+        <article>{{project.strategy}}</article> 
+    </div>
+    <div fxflex>
+        <md-toolbar md-scroll-shrink color="secondary">
+          Equipo
+        </md-toolbar>
+        <article>{{project.team}}</article> 
+    </div>
+    <div fxflex>
+        <md-toolbar md-scroll-shrink color="secondary">
+           Inversion
+        </md-toolbar>
+        <article>{{project.investment}}</article>
+   </div>
+    <div fxflex>
+        <md-toolbar md-scroll-shrink color="secondary">
+           Riesgos
+        </md-toolbar>
+        <article>{{project.risk}}</article>
+   </div>
+    <div fxflex>
+        <md-toolbar md-scroll-shrink color="secondary">
+           Otros
+        </md-toolbar>
+        <article>{{project.other}}</article>
+   </div>
+    <div fxflex>
+        <md-toolbar md-scroll-shrink color="secondary">
+           Retorno, exit 
+        </md-toolbar>
+        <article>{{project.exit}}</article>
+   </div>
+  </section>
+
+      <div fxflex>
+        <md-toolbar md-scroll-shrink color="secondary">
+           Rewards
+        </md-toolbar>
+        <article><app-reward-card [project]=project></app-reward-card></article>
+   </div>
+</section>

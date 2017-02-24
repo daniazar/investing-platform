@@ -1,0 +1,27 @@
+<md-card class="">
+  <md-toolbar color="primary">Crear Proyecto</md-toolbar>
+  <md-card-content>
+    <form class="project-form">
+      <md-input class="field-full-width"    name="title" [(ngModel)]="project.title" placeholder="Titulo"></md-input>
+      <md-input class="field-full-width"    name="description" [(ngModel)]="project.decription" placeholder="Descripcion"></md-input>
+      <md-textarea class="field-full-width" name="summary" [(ngModel)]="project.summary" placeholder="Resumen"></md-textarea>
+      <md-textarea class="field-full-width" name="objective" [(ngModel)]="project.objective" placeholder="Objetivo"></md-textarea>
+      <md-textarea class="field-full-width" name="characteristics" [(ngModel)]="project.characteristics" placeholder="Caracteristicas"></md-textarea>
+      <md-textarea class="field-full-width" name="team" [(ngModel)]="project.team" placeholder="Equipo"></md-textarea>
+      <md-textarea class="field-full-width" name="strategy" [(ngModel)]="project.strategy" placeholder="Estrategia"></md-textarea>
+      <md-textarea class="field-full-width" name="others" [(ngModel)]="project.others" placeholder="Otros"></md-textarea>
+      <md-input class="field-full-width" name="TIR" type=number [(ngModel)]="project.TIR" placeholder="TIR Anualizada esperada" ></md-input>
+      <button md-raised-button (click)="addReward()">Agregar recompensa</button>
+      <md-card class="reward-card" *ngFor="let item of project.rewards">
+          <label>Recompensa: </label>
+          <md-input class="field-full-width" name="type" [(ngModel)]="item.type" placeholder="Tipo"></md-input>
+          <md-input class="field-full-width" name="title" [(ngModel)]="item.title" placeholder="Titulo"></md-input>
+          <md-input class="field-full-width" name="decription" [(ngModel)]="item.decription" placeholder="Descripcion"></md-input>
+          <md-input class="field-full-width" name="amount" [(ngModel)]="item.amount" type=number placeholder="Monto" ></md-input>
+          <md-input class="field-full-width" name="shares" [(ngModel)]="item.shares" type=number placeholder="Acciones %" ></md-input>
+          <md-input class="field-full-width" name="count" [(ngModel)]="item.count" type=number placeholder="Cantidad de recompensas de este tipo" ></md-input>
+      </md-card>
+
+    </form>
+  </md-card-content>
+</md-card>

@@ -1,0 +1,43 @@
+@import "../../master";
+
+
+
+.invest-card {
+  margin: 10px;
+  min-width: 200px;
+  max-width: 390px;
+  md-card-title {
+    color: $primary;
+    font-size: $titleSize;
+  }
+  .category{
+      border: 1px green solid;
+      padding: 10px;
+      color: grey;
+      float: right;
+      top: -11px;
+      left: 130px;
+      position: relative;
+    }
+  .highlights{
+    padding-top: 20px;
+    span{
+      border: 1px red solid;
+      padding: 10px;
+      margin: 5px;
+
+    }
+  }
+  md-card-subtitle{
+    color: $secondary;
+    font-size: $subtitleSize;
+    md-icon{
+      font-size: $subtitleSize;
+    }
+  }
+}
+
+.example-header-image {
+  background-image: url('assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
