@@ -11,6 +11,8 @@
 
 # IDEs and editors
 /.idea
+debug.log
+.vscode/settings.json
 
 # misc
 /.sass-cache
@@ -28,5 +30,12 @@ testem.log
 #System Files
 .DS_Store
 Thumbs.db
-debug.log
-.vscode/settings.json
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+# Build Artifacts
+upload.zip
+resetConfig.sh
