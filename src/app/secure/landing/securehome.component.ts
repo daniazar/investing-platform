@@ -1,16 +1,15 @@
 import {Component, OnInit} from "@angular/core";
 import {Router} from "@angular/router";
-import {LoggedInCallback, UserLoginService} from "../../service/cognito.service";
 
 @Component({
     selector: 'awscognito-angular2-app',
     templateUrl: './secureHome.html'
     // styleUrls: ['/assets/css/sb-admin.css']
 })
-export class SecureHomeComponent implements OnInit, LoggedInCallback {
+export class SecureHomeComponent implements OnInit {
 
-    constructor(public router: Router, public userService: UserLoginService) {
-        this.userService.isAuthenticated(this);
+    constructor(public router: Router) {
+        //this.userService.isAuthenticated(this);
         console.log("SecureHomeComponent: constructor");
     }
 

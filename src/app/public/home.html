@@ -1,38 +1,38 @@
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-    <div class="container topnav">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand topnav" href="#">Asociame</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a [routerLink]="['/home']">Home</a>
+<nav class="navbar navbar-default">
+
+    <md-toolbar color="primary">
+        <a [routerLink]="['/home']">Asociame</a>
+        <span class="example-spacer"></span>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                    <a [routerLink]="['']">Home</a>
                 </li>
                 <li>
-                    <a [routerLink]="['/home/create']">Proyecto nuevo</a>
+                    <a [routerLink]="['/create']">Proyecto nuevo</a>
                 </li>
                 <li>
-                    <a [routerLink]="['/home/category/1']">Category</a>
+                    <a [routerLink]="['/category/1']">Category</a>
                 </li>
-                <li>
-                    <a [routerLink]="['/home/login']">Login</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
+            <li>
+                <!-- We'll show the login link if the user is not currently logged in -->
+                <a (click)=authService.login() *ngIf="!authService.isLoggedIn()">Loguearse</a>
+            </li>
+            <li>
+                <!-- On the other hand, if the user is logged in, we'll show a log out link -->
+                <a [routerLink]="['/profile']" *ngIf="authService.isLoggedIn()">{{authService.getProfile().name}}</a>
+            </li>
+
+            <li>
+                <!-- On the other hand, if the user is logged in, we'll show a log out link -->
+                <a (click)=authService.logout() *ngIf="authService.isLoggedIn()">Salir</a>
+            </li>
+        </ul>
+    </md-toolbar>
 </nav>
+      <button class="btn btn-primary btn-margin" (click)="authService.login()" *ngIf="!authService.authenticated()">Log In</button>
+      <button class="btn btn-primary btn-margin" (click)="authService.logout()" *ngIf="authService.authenticated()">Log Out</button>
+
+
 <div class="intro-header">
     <router-outlet></router-outlet>
 </div>

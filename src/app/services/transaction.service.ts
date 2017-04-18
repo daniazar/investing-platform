@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { IProject} from '../objects/iproject'
 @Injectable()
-export class ProjectService {
+export class TransactionService {
 
   constructor() { }
+
 
 
       public  getProject(id: any): IProject {
@@ -93,8 +94,6 @@ export class ProjectService {
      public deleteProject(id: any){
        
      }
-
-
 
 
 }

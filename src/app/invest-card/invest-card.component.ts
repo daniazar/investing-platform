@@ -13,7 +13,7 @@ export class InvestCardComponent implements OnInit {
    }
 
   ngOnInit() {
-        console.log(this.item);
+        //console.log(this.item);
   }
 
 
